@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/filter_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/open_sans_semi_bold"
+            android:paddingBottom="@dimen/filter_dialog_title_padding"
+            android:text="@string/display"
+            android:textColor="?attr/colorPrimary"
+            android:textSize="18sp" />
+
+
+        <CheckBox
+            android:id="@+id/checkbox_system_apps"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="-6dp"
+            android:fontFamily="@font/open_sans_regular"
+            android:hapticFeedbackEnabled="true"
+            android:paddingHorizontal="10dp"
+            android:text="@string/system_apps"
+            android:textColor="?attr/text_color"
+            android:textSize="@dimen/title_size" />
+
+        <CheckBox
+            android:id="@+id/checkbox_user_apps"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="-6dp"
+            android:fontFamily="@font/open_sans_regular"
+            android:hapticFeedbackEnabled="true"
+            android:paddingHorizontal="10dp"
+            android:text="@string/user_apps"
+            android:textColor="?attr/text_color"
+            android:textSize="@dimen/title_size" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/open_sans_semi_bold"
+            android:paddingVertical="@dimen/filter_dialog_title_padding"
+            android:text="@string/sort_by"
+            android:textColor="?attr/colorPrimary"
+            android:textSize="18sp" />
+
+        <RadioGroup
+            android:id="@+id/radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/radio_app_title"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="-6dp"
+                android:fontFamily="@font/open_sans_regular"
+                android:hapticFeedbackEnabled="true"
+                android:paddingHorizontal="10dp"
+                android:text="@string/app_title"
+                android:textColor="?attr/text_color"
+                android:textSize="@dimen/title_size" />
+
+            <RadioButton
+                android:id="@+id/radio_size"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="-6dp"
+                android:fontFamily="@font/open_sans_regular"
+                android:hapticFeedbackEnabled="true"
+                android:paddingHorizontal="10dp"
+                android:text="@string/size"
+                android:textColor="?attr/text_color"
+                android:textSize="@dimen/title_size" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/open_sans_semi_bold"
+            android:paddingVertical="@dimen/filter_dialog_title_padding"
+            android:text="@string/order_by"
+            android:textColor="?attr/colorPrimary"
+            android:textSize="18sp" />
+
+        <RadioGroup
+            android:id="@+id/radio_group_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/radio_ascending"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="-6dp"
+                android:fontFamily="@font/open_sans_regular"
+                android:hapticFeedbackEnabled="true"
+                android:paddingHorizontal="10dp"
+                android:text="@string/ascending"
+                android:textColor="?attr/text_color"
+                android:textSize="@dimen/title_size" />
+
+            <RadioButton
+                android:id="@+id/radio_descending"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="-6dp"
+                android:fontFamily="@font/open_sans_regular"
+                android:hapticFeedbackEnabled="true"
+                android:paddingHorizontal="10dp"
+                android:text="@string/descending"
+                android:textColor="?attr/text_color"
+                android:textSize="@dimen/title_size" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/filter_layout"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:id="@+id/apply_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/ripple_effect_rounded_corner"
+            android:fontFamily="@font/open_sans_regular"
+            android:paddingVertical="8dp"
+            android:paddingHorizontal="10dp"
+            android:text="@string/btn_apply"
+            android:textAllCaps="true"
+            android:textColor="?attr/colorPrimary" />
+
+        <TextView
+            android:id="@+id/cancel_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@+id/apply_btn"
+            android:background="@drawable/ripple_effect_rounded_corner"
+            android:fontFamily="@font/open_sans_regular"
+            android:paddingVertical="8dp"
+            android:paddingHorizontal="10dp"
+            android:text="@string/btn_cancel"
+            android:textAllCaps="true"
+            android:textColor="?attr/colorPrimary" />
+    </RelativeLayout>
+</RelativeLayout>

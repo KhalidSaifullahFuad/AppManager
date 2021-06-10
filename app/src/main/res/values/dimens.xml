@@ -1,0 +1,13 @@
+<resources>
+    <dimen name="app_bar_height">230dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+    <dimen name="icon_width">40dp</dimen>
+    <dimen name="item_margin">20dp</dimen>
+    <dimen name="padding_vertical">12dp</dimen>
+    <dimen name="padding_horizontal">25dp</dimen>
+    <dimen name="title_size">15sp</dimen>
+    <dimen name="subtitle_size">12sp</dimen>
+    <dimen name="corner_radius">8dp</dimen>
+    <dimen name="filter_dialog_title_padding">15dp</dimen>
+</resources>

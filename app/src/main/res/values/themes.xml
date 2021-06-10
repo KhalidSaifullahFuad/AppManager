@@ -1,0 +1,44 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.AppManager" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!--    <style name="Theme.AppManager" parent="Theme.AppCompat.Light.DarkActionBar">-->
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/red</item>
+        <item name="colorPrimaryVariant">@color/white</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">?attr/colorPrimary</item>
+        <item name="colorSecondaryVariant">#2196F3</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/white_gray</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>
+        <!-- Customize your theme here. -->
+
+        <item name="background_color">@color/white_gray</item>
+        <item name="text_color">@color/dark_gray</item>
+        <item name="dialog_bg_color">@color/white</item>
+        <item name="content_bg_color">#E3E3E3</item>
+    </style>
+
+
+    <style name="ExpandedAppBar" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:textSize">18sp</item>
+        <item name="fontFamily">@font/open_sans_semi_bold</item>
+        <item name="android:textColor">?attr/text_color</item>
+    </style>
+
+    <style name="CollapsedAppBar" parent="TextAppearance.AppCompat.Medium">
+        <item name="fontFamily">@font/open_sans_semi_bold</item>
+        <item name="android:textColor">?attr/colorPrimary</item>
+    </style>
+
+    <style name="Theme.AppManager.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.AppManager.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.AppManager.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+</resources>
