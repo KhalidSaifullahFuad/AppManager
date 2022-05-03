@@ -18,6 +18,7 @@ import com.facebook.shimmer.ShimmerFrameLayout;
 import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -28,6 +29,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewTreeObserver;
 import android.view.Window;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
@@ -56,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private AppRecyclerViewAdapter adapter;
     private ShimmerFrameLayout shimmerFrameLayout;
+    private CardView selectedOptionMenu;
 
     private boolean showUserApps;
     private boolean showSystemApps;
@@ -72,8 +75,17 @@ public class MainActivity extends AppCompatActivity {
         searchText = findViewById(R.id.search_text);
         filter = findViewById(R.id.filter_icon);
         shimmerFrameLayout = findViewById(R.id.shimmer_layout);
+        selectedOptionMenu = findViewById(R.id.selected_option_menu);
         recyclerView = findViewById(R.id.recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        final ViewTreeObserver observer= selectedOptionMenu.getViewTreeObserver();
+        observer.addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+            @Override
+            public void onGlobalLayout() {
+                selectedOptionMenu.setY(selectedOptionMenu.getHeight());
+            }
+        });
     }
 
     @Override
@@ -172,14 +184,12 @@ public class MainActivity extends AppCompatActivity {
                 public void onItemLongClick(int position, View view) {
                     ImageView selectedView = view.findViewById(R.id.selected_view);
                     adapter.isSelectMode = true;
+
+                    selectedOptionMenu.animate().translationY(0).setDuration(5000);
                     if (selectedApps.contains(appItems.get(position))) {
-//                            view.setBackgroundColor(Color.TRANSPARENT);
-//                            selectedView.setVisibility(View.INVISIBLE);
                         appItems.get(position).isSelected = false;
                         selectedApps.remove(appItems.get(position));
                     } else {
-//                            view.setBackgroundResource(R.color.gray);
-//                            selectedView.setVisibility(View.VISIBLE);
                         appItems.get(position).isSelected = true;
                         selectedApps.add(appItems.get(position));
                     }

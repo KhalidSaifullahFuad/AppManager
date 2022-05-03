@@ -20,7 +20,7 @@
         android:id="@+id/selected_layout"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:background="#B1BCBCBC"
+        android:background="#B1515151"
         android:orientation="horizontal"/>
 
 
