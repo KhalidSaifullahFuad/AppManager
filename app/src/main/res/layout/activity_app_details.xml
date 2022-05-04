@@ -35,7 +35,7 @@
                 app:contentInsetLeft="0dp"
                 app:contentInsetStart="0dp"
                 app:contentInsetStartWithNavigation="0dp"
-                app:layout_collapseMode="pin"
+                app:layout_collapseMode="parallax"
                 app:popupTheme="@style/Theme.AppManager.PopupOverlay" />
 
             <LinearLayout
@@ -53,7 +53,7 @@
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
 
-    <!--    <include layout="@layout/content_scrolling" />-->
+    <!--        <include layout="@layout/content_scrolling" />-->
 
     <androidx.core.widget.NestedScrollView
         android:id="@+id/nested_scroll_view"
